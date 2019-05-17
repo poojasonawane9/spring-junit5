@@ -1,0 +1,20 @@
+package com.capgemini.bankapp.service;
+
+import java.util.List;
+
+import com.capgemini.bankapp.dao.BankAccountDao;
+import com.capgemini.bankapp.entity.BankAccount;
+
+public class BankAccountService {
+	
+	BankAccountDao dao;
+
+	public BankAccount addBankAccount(BankAccount account) {
+		return dao.save(account);
+	}
+	
+	public List<BankAccount> getAllBankAccount(){
+		return dao.findAll();
+		
+	}
+}

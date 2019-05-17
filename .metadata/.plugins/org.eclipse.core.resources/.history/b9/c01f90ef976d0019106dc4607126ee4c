@@ -1,0 +1,27 @@
+package com.capgemini.bankapp.entity;
+
+public class CurrentAccount extends BankAccount{
+
+	private int odLimit;
+
+	
+
+	public CurrentAccount() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public CurrentAccount(int accountId, String accountHolderName, Double accountBalance) {
+		super(accountId, accountHolderName, accountBalance);
+	}
+
+	public int getOdLimit() {
+		return odLimit;
+	}
+
+	public void setOdLimit(int odLimit) {
+		this.odLimit = odLimit;
+	}
+	
+	
+}

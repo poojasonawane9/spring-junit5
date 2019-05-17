@@ -1,0 +1,28 @@
+package com.capgemini.bankapp.entity;
+
+public class SavingAccount extends BankAccount {
+
+	private Double salary;
+
+	public SavingAccount() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public SavingAccount(String accountHolderName, Double accountBalance,Double salary) {
+		super(accountHolderName, accountBalance);
+		this.salary = salary;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	
+	
+	
+	
+}

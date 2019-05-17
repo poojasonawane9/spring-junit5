@@ -1,0 +1,36 @@
+package com.capgemini.bankapp.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+@Entity
+//@Inheritance(strategy=InheritanceType.JOINED)
+@Table(name = "saving_account")
+public class SavingAccount extends BankAccount {
+
+	 @Column(name = "salary")
+	private Double salary;
+
+	public SavingAccount() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public SavingAccount(String accountHolderName, Double accountBalance,String accountType,Double salary) {
+		super(accountHolderName, accountBalance,accountType);
+		this.salary = salary;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	
+}

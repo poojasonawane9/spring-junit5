@@ -1,0 +1,31 @@
+package com.capgemini.bankapp.entity;
+
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Inheritance(strategy=InheritanceType.JOINED)
+public class CurrentAccount extends BankAccount{
+
+	private int odLimit;
+
+	
+
+	public CurrentAccount() {
+		super();
+	}
+
+	public CurrentAccount( String accountHolderName, Double accountBalance,int odLimit) {
+		super(accountHolderName, accountBalance);
+		this.odLimit = odLimit;
+	}
+
+	public int getOdLimit() {
+		return odLimit;
+	}
+
+	public void setOdLimit(int odLimit) {
+		this.odLimit = odLimit;
+	}
+	
+	
+}
